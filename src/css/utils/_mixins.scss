@@ -1,0 +1,36 @@
+// * Flex
+@mixin flex($flex-flow, $justify-content, $align-items) {
+  display: flex;
+  flex-flow: $flex-flow;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+@mixin font($Weight, $Size) {
+  font: $Weight $Size $font-family;
+}
+
+// * Fonts
+@mixin font-h1($Weight) {
+  font: $Weight max(28px, 2vw) / max(40px, 3vw) $font-family;
+}
+@mixin font-h2($Weight) {
+  font: $Weight max(24px, 2vw) / max(42px, 3vw) $font-family;
+}
+@mixin font-h3($Weight) {
+  font: $Weight max(22px, 2vw) / max(42px, 3vw) $font-family;
+}
+@mixin font-h4($Weight) {
+  font: $Weight max(20px, 1.5vw) / max(26px, 3vw) $font-family;
+}
+@mixin font-h5($Weight) {
+  font: $Weight max(18px, 2vw) / max(22px, 3vw) $font-family;
+}
+
+// * Box shadows
+@mixin box-shadow($Color, $Alpha) {
+  -webkit-box-shadow: inset -4px -4px 25px 0
+    rgba($color: $Color, $alpha: $Alpha);
+  -moz-box-shadow: inset -4px -4px 25px 0 rgba($color: $Color, $alpha: $Alpha);
+  box-shadow: inset -4px -4px 25px 0 rgba($color: $Color, $alpha: $Alpha);
+}

@@ -1,0 +1,24 @@
+// * Global Utilities
+@import "./utils/vars";
+@import "./utils/mixins";
+@import "./utils/normalizer";
+@import "./utils/reusables";
+
+// * Main Styles - homepage
+@import "./components/main";
+
+// * Components
+// Global
+@import "./components/header";
+@import "./components/footer";
+
+// Local: index.html (homepage)
+@import "./components/homepage/main__hero";
+@import "./components/homepage/main__services";
+@import "./components/homepage/main__about";
+@import "./components/homepage/main__testimonials";
+@import "./components/homepage/main__contact";
+@import "./components/homepage/decorations";
+
+// * Third Party Styles
+@import "./components/third-party";

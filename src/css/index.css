@@ -1,0 +1,1220 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+/* Custom Normalizer */
+*,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+address {
+  margin: 0;
+  margin-block-end: 0;
+  margin-inline-end: 0;
+  margin-block-start: 0;
+  margin-inline-start: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+form,
+label,
+input,
+legend,
+textarea {
+  outline: none;
+  font: inherit;
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* End of custom normalizer
+     ========================================================================== */
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+     ========================================================================== */
+/**
+   * Remove the margin in all browsers.
+   */
+body {
+  margin: 0;
+}
+
+/**
+   * Render the `main` element consistently in IE.
+   */
+main {
+  display: block;
+}
+
+/**
+   * Correct the font size and margin on `h1` elements within `section` and
+   * `article` contexts in Chrome, Firefox, and Safari.
+   */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+     ========================================================================== */
+/**
+   * 1. Add the correct box sizing in Firefox.
+   * 2. Show the overflow in Edge and IE.
+   */
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+     ========================================================================== */
+/**
+   * Remove the gray background on active links in IE 10.
+   */
+a {
+  background-color: transparent;
+}
+
+/**
+   * 1. Remove the bottom border in Chrome 57-
+   * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+   */
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
+}
+
+/**
+   * Add the correct font weight in Chrome, Edge, and Safari.
+   */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+   * Add the correct font size in all browsers.
+   */
+small {
+  font-size: 80%;
+}
+
+/**
+   * Prevent `sub` and `sup` elements from affecting the line height in
+   * all browsers.
+   */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+     ========================================================================== */
+/**
+   * Remove the border on images inside links in IE 10.
+   */
+img {
+  border-style: none;
+}
+
+/* Forms
+     ========================================================================== */
+/**
+   * 1. Change the font styles in all browsers.
+   * 2. Remove the margin in Firefox and Safari.
+   */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+   * Show the overflow in IE.
+   * 1. Show the overflow in Edge.
+   */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+   * Remove the inheritance of text transform in Edge, Firefox, and IE.
+   * 1. Remove the inheritance of text transform in Firefox.
+   */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+   * Correct the inability to style clickable types in iOS and Safari.
+   */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -moz-appearance: button;
+       appearance: button;
+  -webkit-appearance: button;
+}
+
+/**
+   * Remove the inner border and padding in Firefox.
+   */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+   * Restore the focus styles unset by the previous rule.
+   */
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+   * Correct the padding in Firefox.
+   */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+   * 1. Correct the text wrapping in Edge and IE.
+   * 2. Correct the color inheritance from `fieldset` elements in IE.
+   * 3. Remove the padding so developers are not caught out when they zero out
+   *    `fieldset` elements in all browsers.
+   */
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+   * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+   */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+   * Remove the default vertical scrollbar in IE 10+.
+   */
+textarea {
+  overflow: auto;
+}
+
+/**
+   * 1. Add the correct box sizing in IE 10.
+   * 2. Remove the padding in IE 10.
+   */
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+   * Correct the cursor style of increment and decrement buttons in Chrome.
+   */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+   * 1. Correct the odd appearance in Chrome and Safari.
+   * 2. Correct the outline style in Safari.
+   */
+[type=search] {
+  -moz-appearance: textfield;
+       appearance: textfield;
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+   * Remove the inner padding in Chrome and Safari on macOS.
+   */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+   * 1. Correct the inability to style clickable types in iOS and Safari.
+   * 2. Change font properties to `inherit` in Safari.
+   */
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+     ========================================================================== */
+/*
+   * Add the correct display in Edge, IE 10+, and Firefox.
+   */
+details {
+  display: block;
+}
+
+/*
+   * Add the correct display in all browsers.
+   */
+summary {
+  display: list-item;
+}
+
+/* Misc
+     ========================================================================== */
+/**
+   * Add the correct display in IE 10+.
+   */
+template {
+  display: none;
+}
+
+/**
+   * Add the correct display in IE 10.
+   */
+[hidden] {
+  display: none;
+}
+
+/* Reusables */
+.font__align--left {
+  text-align: left;
+}
+.font__align--center {
+  text-align: center;
+}
+.font__align--right {
+  text-align: right;
+}
+.font__size--12 {
+  font-size: 12px;
+}
+.font__size--14 {
+  font-size: 14px;
+}
+.font__size--16 {
+  font-size: 16px;
+}
+.font__size--18 {
+  font-size: 18px;
+}
+.font__size--20 {
+  font-size: 20px;
+}
+.font__size--24 {
+  font-size: 24px;
+}
+.font__size--32 {
+  font-size: 32px;
+}
+.font__weight--500 {
+  font-weight: 500;
+}
+.font__weight--700 {
+  font-weight: 700;
+}
+.font__weight--900 {
+  font-weight: 900;
+}
+.font__color--primary {
+  color: #fdfaff;
+}
+.font__color--secondary {
+  color: #aaaaaa;
+}
+.font__color--tertiary {
+  color: #dadada;
+}
+.font__color--white {
+  color: #fff;
+}
+.font__color--brand-purple {
+  color: #9600d6;
+}
+.font__letter-spacing--03 {
+  letter-spacing: 0.03em;
+}
+.font__letter-spacing--04 {
+  letter-spacing: 0.04em;
+}
+.font__letter-spacing--06 {
+  letter-spacing: 0.06em;
+}
+
+.image--portrait {
+  aspect-ratio: 2/3;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.image--landscape {
+  aspect-ratio: 3/2;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#credits {
+  color: #dadada;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  transition: 350msease-in-out;
+}
+#credits:hover, #credits:active {
+  color: #fdfaff;
+  text-decoration-color: #9600d6;
+  -moz-text-decoration-color: #9600d6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  background: rgba(198, 130, 227, 0.5);
+  text-shadow: 3px 3px rgba(24, 18, 33, 0.5);
+}
+
+::selection {
+  background: rgba(198, 130, 227, 0.5);
+  text-shadow: 3px 3px rgba(24, 18, 33, 0.5);
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: normal;
+  font-size: 14px;
+  position: relative;
+  background-color: #181221 !important;
+  color: #fdfaff !important;
+  background-size: 40px 40px;
+  background-image: linear-gradient(to right, rgba(150, 0, 214, 0.025) 1px, transparent 1px), linear-gradient(to bottom, rgba(150, 0, 214, 0.025) 1px, transparent 1px);
+}
+
+section {
+  position: relative;
+  overflow-x: clip;
+}
+
+h1 {
+  font: 700 max(28px, 2vw)/max(40px, 3vw) "Rubik", sans-serif;
+}
+
+h2 {
+  font: 700 max(24px, 2vw)/max(42px, 3vw) "Rubik", sans-serif;
+}
+
+h3 {
+  font: 700 max(22px, 2vw)/max(42px, 3vw) "Rubik", sans-serif;
+}
+
+h4 {
+  font: 700 max(20px, 1.5vw)/max(26px, 3vw) "Rubik", sans-serif;
+}
+
+h5 {
+  font: 700 max(18px, 2vw)/max(22px, 3vw) "Rubik", sans-serif;
+}
+
+b {
+  font-weight: 700;
+}
+
+a:hover {
+  cursor: pointer;
+  filter: brightness(0.85);
+}
+
+.main__separator {
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  margin: 44px 46px;
+}
+
+.link {
+  color: #8fffb3;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: 350ms cubic-bezier(0.05, 0.35, 0.6, 0.95);
+}
+.link:hover, .link:active {
+  color: rgba(143, 255, 179, 0.75);
+}
+
+.button {
+  position: relative;
+  display: inline-block;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  border-radius: 50px;
+  padding: 6px 12px;
+  color: #fdfaff;
+  background-color: transparent;
+  font-weight: bold;
+  text-decoration: none;
+  transform-origin: center;
+  transition: 350ms cubic-bezier(0.05, 0.35, 0.6, 0.95);
+  box-shadow: inset -4px -4px 25px 0 rgba(0, 0, 0, 0.25);
+}
+.button:hover, .button:active {
+  color: #9600d6;
+  cursor: pointer;
+  filter: brightness(0.85);
+  transform: translateY(-3px);
+}
+.button--primary {
+  color: #9600d6;
+  background-color: #fdfaff;
+  border-color: #9600d6;
+}
+.button--close {
+  width: 43px;
+  aspect-ratio: 1/1;
+}
+.button--close b {
+  position: absolute;
+  top: 50%;
+  left: 50;
+  transform: translate(-50%, -50%);
+}
+.button--close:hover, .button--close:active {
+  color: #9600d6;
+  border-color: #9600d6;
+  transform: rotate(180deg);
+}
+
+@media (min-width: 481px) {
+  body {
+    font-size: 16px;
+  }
+  .main__separator {
+    margin: 44px 120px;
+  }
+}
+.header {
+  transition: all 350ms cubic-bezier(0.05, 0.35, 0.6, 0.95);
+  display: grid;
+  grid-auto-flow: column;
+  place-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  background-color: transparent;
+  padding: 20px 46px;
+  border-bottom: 4px double transparent;
+  transform: translateY(-100%);
+  animation: 1s header-animation 350ms cubic-bezier(0.05, 0.35, 0.6, 0.95) forwards;
+}
+@keyframes header-animation {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.header--default {
+  background-color: rgba(24, 18, 33, 0.95);
+  border-bottom: 2px solid rgba(198, 130, 227, 0.25);
+  box-shadow: inset -4px -4px 25px 0 rgba(150, 0, 214, 0.15);
+}
+.header__navigation--mobile {
+  touch-action: none;
+  font-size: 32px;
+  position: absolute;
+  top: 0;
+  right: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(24, 18, 33, 0.75);
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+  transition: 350ms cubic-bezier(0.05, 0.35, 0.6, 0.95);
+}
+.header__navigation--mobile nav button {
+  position: absolute;
+  top: 5%;
+  right: 10%;
+}
+.header__navigation--mobile nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.header__navigation--mobile nav ul li a {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 12px;
+}
+.header__navigation--mobile nav ul li a svg {
+  width: 30px;
+}
+
+.footer {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  height: 100vh;
+  background-blend-mode: multiply;
+  background-image: linear-gradient(to left, #181221, #340a3a, #181221), linear-gradient(to top, #9600d6, #27082c, #9600d6);
+  border-top: 2px solid rgba(198, 130, 227, 0.5);
+  border-bottom: 2px solid rgba(198, 130, 227, 0.5);
+  margin-top: 44px;
+}
+.footer > nav {
+  margin: 22px 46px;
+}
+.footer nav {
+  display: flex;
+  font-size: 18px;
+}
+.footer nav.footer__stores, .footer nav.footer__about, .footer nav.footer__legal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+.footer nav.footer__stores p, .footer nav.footer__about p, .footer nav.footer__legal p {
+  width: 100%;
+}
+.footer nav.footer__stores a, .footer nav.footer__about a, .footer nav.footer__legal a {
+  text-decoration: underline;
+}
+.footer nav.footer__socials {
+  display: flex;
+  gap: 22px;
+  font-size: 24px;
+  transition: all 0.3s ease-in-out;
+}
+.footer nav.footer__socials a:hover {
+  color: #c682e3;
+}
+.footer__nav-container {
+  display: flex;
+  gap: 44px;
+  margin: 22px 46px;
+}
+.footer form {
+  display: grid;
+  gap: 12px;
+  justify-items: start;
+  margin: 22px 46px;
+}
+.footer form label {
+  color: #9600d6;
+}
+.footer form div {
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 12px;
+}
+.footer form div input {
+  color: #dadada;
+  background-color: transparent;
+  border: 2px solid #9600d6;
+  border-radius: 100px;
+  padding: 12px;
+}
+.footer form div input:first-child {
+  padding-left: 32px;
+}
+.footer form div input:hover {
+  cursor: pointer;
+}
+.footer form div svg {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 12px;
+  color: white;
+}
+.footer address {
+  margin: 22px 46px;
+}
+.footer address,
+.footer small {
+  font-size: 14px;
+  color: #dadada;
+}
+
+.main__hero {
+  min-height: 100dvh;
+}
+.main__hero__container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 25px;
+  min-height: 100dvh;
+  padding: 22px 0;
+}
+@media (min-width: 481px) {
+  .main__hero__container {
+    padding: 100px 0 25px 0;
+  }
+}
+.main__hero__container__video {
+  overflow: clip;
+  height: 100dvh;
+  width: 100%;
+  position: absolute;
+}
+.main__hero__container__video video {
+  position: absolute;
+  z-index: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.main__hero__container__video::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(12, 1, 15, 0.5);
+  box-shadow: inset 0px 0px 20px 25px rgba(0, 0, 0, 0.379);
+  z-index: 0;
+}
+.main__hero__container__texts {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 46px;
+}
+.main__hero__container h2 b {
+  display: inline-block;
+  font: 700 max(40px, 3.5vw)/max(52px, 4.5vw) "Rubik", sans-serif;
+  background-color: #9600d6;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.main__hero__container h2:first-of-type b {
+  position: relative;
+  background-image: linear-gradient(to right, #9600d6, #8fffb3 70%);
+}
+.main__hero__container h2:first-of-type b::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  height: 4px;
+  background-color: transparent;
+  background-image: linear-gradient(to right, #9600d6, #8fffb3 70%);
+}
+.main__hero__container h2:last-of-type b {
+  position: relative;
+  background-image: linear-gradient(to right, #9600d6 30%, #8fffb3);
+}
+.main__hero__container h2:last-of-type b::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  height: 4px;
+  background-color: transparent;
+  background-image: linear-gradient(to right, #9600d6 30%, #8fffb3);
+}
+
+@media (min-width: 481px) {
+  .main__hero__container__texts {
+    padding: 0 120px;
+  }
+}
+.main__services {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.main__services > * {
+  margin: 0 46px;
+}
+.main__services h3 {
+  margin-top: 22px;
+}
+.main__services p {
+  position: relative;
+}
+.main__services__marquee {
+  position: relative;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin: 0 auto;
+  max-width: 95vw;
+}
+.main__services__marquee p {
+  display: inline-block;
+  white-space: nowrap;
+}
+.main__services__marquee p:first-child {
+  animation: 10s marquee-text-left1 linear infinite;
+  background: #9600d6;
+  background: linear-gradient(90deg, #9600d6 0%, #8fffb3 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9600d6",endColorstr="#8fffb3",GradientType=1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@keyframes marquee-text-left1 {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.main__services__marquee p:last-child {
+  animation: 10s marquee-text-left2 linear infinite;
+  animation-delay: 5s;
+  background: #8fffb3;
+  background: linear-gradient(90deg, #8fffb3 0%, #9600d6 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#8fffb3",endColorstr="#9600d6",GradientType=1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@keyframes marquee-text-left2 {
+  from {
+    transform: translateX(1%);
+  }
+  to {
+    transform: translateX(-201%);
+  }
+}
+.main__services__gallery {
+  position: relative;
+}
+.main__services__gallery__container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+  gap: 22px;
+}
+.main__services__gallery__container figure {
+  position: relative;
+  min-width: 266px;
+  flex-basis: 32%;
+  box-shadow: 0 0 25px 5px rgba(150, 0, 214, 0.25);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  overflow: clip;
+}
+.main__services__gallery__container figure::after {
+  box-shadow: inset 0px -120px 40px -60px rgba(0, 0, 0, 0.75);
+  content: "";
+  position: absolute;
+  top: 0;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.main__services__gallery__container figure img {
+  aspect-ratio: 3/2;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main__services__gallery__container figure figcaption {
+  position: absolute;
+  padding: 12px;
+  bottom: 0;
+  z-index: 1;
+}
+.main__services__gallery__container figure figcaption a {
+  position: relative;
+}
+.main__services__gallery__container figure figcaption a::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url('data:image/svg+xml,<svg fill="%238fff83" height="10px" width="10px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" ></g><g id="SVGRepo_iconCarrier"><path id="XMLID_222_" d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001 c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213 C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606 C255,161.018,253.42,157.202,250.606,154.389z" stroke-width="0"></path></g></svg>');
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: 350ms cubic-bezier(0.05, 0.35, 0.6, 0.95);
+}
+.main__services__gallery__container figure figcaption a:hover::after {
+  transform: translateX(2px);
+}
+.main__services__gallery__view-more {
+  text-align: center;
+  margin: 22px 0;
+}
+.main__services__gallery__view-more p {
+  margin-bottom: 12px;
+}
+
+@media (min-width: 481px) {
+  .main__services {
+    align-items: center;
+  }
+  .main__services > * {
+    margin: 0 120px;
+  }
+  .main__services__gallery__container figure {
+    min-width: -30px;
+  }
+}
+.main__about > * {
+  margin: 12px 46px;
+}
+.main__about > article {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 22px;
+}
+.main__about__accordion {
+  border: 2px solid rgba(217, 217, 217, 0.1);
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.main__about__accordion[open] summary ~ * {
+  animation: sweep 0.5s ease-in-out;
+}
+@keyframes sweep {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.main__about__accordion:not([open]) summary ~ * {
+  animation: none;
+}
+.main__about__accordion summary {
+  font: 400 max(20px, 1.5vw)/max(26px, 3vw) "Rubik", sans-serif;
+  padding: 6px 12px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.main__about__accordion--content {
+  padding: 12px 6px;
+}
+
+@media (min-width: 481px) {
+  .main__about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main__about > * {
+    margin: 12px 120px;
+  }
+  .main__about__accordion {
+    width: 750px;
+  }
+}
+.main__testimonials > * {
+  margin: 22px 46px;
+}
+.main__testimonials__container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+.main__testimonials__review {
+  max-width: 400px;
+}
+.main__testimonials__review:nth-of-type(1) cite {
+  color: greenyellow;
+}
+.main__testimonials__review:nth-of-type(1) img {
+  border-color: greenyellow;
+  background-color: rgba(173, 255, 47, 0.3);
+}
+.main__testimonials__review:nth-of-type(2) cite {
+  color: gold;
+}
+.main__testimonials__review:nth-of-type(2) img {
+  border-color: gold;
+  background-color: rgba(255, 215, 0, 0.3);
+}
+.main__testimonials__review:nth-of-type(3) cite {
+  color: orangered;
+}
+.main__testimonials__review:nth-of-type(3) img {
+  border-color: orangered;
+  background-color: rgba(255, 69, 0, 0.3);
+}
+.main__testimonials__review:nth-child(odd) blockquote {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+.main__testimonials__review:nth-child(odd) blockquote cite {
+  flex-direction: row-reverse;
+}
+.main__testimonials__review blockquote {
+  display: flex;
+  gap: 22px;
+}
+.main__testimonials__review blockquote figure {
+  flex-shrink: 0;
+}
+.main__testimonials__review blockquote figure img {
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 70px;
+}
+.main__testimonials__review blockquote div {
+  font-size: 12px;
+  display: grid;
+  gap: 12px;
+}
+.main__testimonials__review blockquote div cite {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 14px;
+  font-style: normal;
+}
+.main__testimonials__review blockquote div cite i {
+  font-size: 11px;
+  text-decoration: underline;
+  color: rgba(255, 255, 255, 0.5);
+}
+.main__testimonials__review blockquote div q {
+  font-size: 14px;
+  color: #9600d6;
+  quotes: none;
+}
+.main__testimonials a em {
+  font-style: normal;
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .main__testimonials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main__testimonials > * {
+    margin: 22px 120px;
+  }
+  .main__testimonials__review:nth-child(odd) blockquote {
+    flex-direction: row;
+    text-align: left;
+  }
+  .main__testimonials__review:nth-child(odd) blockquote cite {
+    flex-direction: row;
+  }
+}
+.main__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  overflow: hidden;
+}
+.main__contact > * {
+  margin: 0 46px;
+}
+.main__contact form {
+  color: #9600d6;
+  background-color: rgba(198, 130, 227, 0.1);
+  border: 2px solid #9600d6;
+  border-radius: 7px;
+  padding: 12px;
+  margin-top: 12px;
+}
+.main__contact form > * {
+  margin: 12px 0;
+}
+.main__contact form h5 {
+  text-align: center;
+}
+.main__contact form hr {
+  border-color: #9600d6;
+  margin: 22px 44px;
+}
+.main__contact form label {
+  font-size: 12px;
+}
+.main__contact form input,
+.main__contact form textarea {
+  max-width: 100%;
+  max-height: 175px;
+  font-size: 14px;
+  color: #fdfaff;
+  background-color: rgba(217, 217, 217, 0.2);
+  border: 2px solid #9600d6;
+  border-radius: 7px;
+  padding: 8px 6px;
+}
+.main__contact form div {
+  display: flex;
+  flex-direction: column;
+}
+.main__contact small {
+  opacity: 0.8;
+  margin-top: -10px;
+}
+
+@media (min-width: 481px) {
+  .main__contact {
+    align-items: center;
+  }
+  .main__contact > * {
+    margin: 0 120px;
+  }
+  .main__contact form {
+    width: 500px;
+  }
+}
+body div.decorations {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -5;
+}
+body div.decorations__ninjastext {
+  position: absolute;
+  top: 105dvh;
+  right: 0;
+  writing-mode: vertical-rl;
+  text-orientation: sideways;
+  transform: rotate(180deg);
+  font-size: 128px;
+  line-height: 60px;
+  font-weight: 700;
+  color: rgba(150, 0, 214, 0.05);
+  z-index: -1;
+}
+body div.decorations__blob {
+  position: absolute;
+  width: 100%;
+  aspect-ratio: 1/1;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  z-index: -2;
+}
+body div.decorations__blob--1 {
+  top: 0;
+  left: 0;
+  background-image: radial-gradient(circle at -100% -100%, rgba(150, 0, 214, 0.4), transparent 80%);
+}
+body div.decorations__blob--2 {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200%;
+  background-image: radial-gradient(rgba(150, 0, 214, 0.15), transparent 70%);
+}
+body div.decorations__blob--3 {
+  top: -66%;
+  left: 0;
+  width: 100%;
+  background-image: radial-gradient(circle at 50% 50%, rgba(150, 0, 214, 0.1), transparent 60%);
+}
+body div.decorations__blob--4 {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(rgba(150, 0, 214, 0.15), transparent 50%);
+}/*# sourceMappingURL=index.css.map */

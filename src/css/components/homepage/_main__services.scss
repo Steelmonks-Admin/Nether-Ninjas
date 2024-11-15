@@ -1,0 +1,210 @@
+.main {
+  &__services {
+    display: flex;
+    flex-direction: column;
+    gap: $margin__mobile--m;
+
+    // Keep the marquee text's width 100%
+    & > * {
+      margin: 0 $page__mobile;
+    }
+
+    h3 {
+      margin-top: $margin__mobile--m;
+    }
+
+    p {
+      position: relative;
+    }
+
+    &__marquee {
+      position: relative;
+
+      overflow-x: hidden;
+
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+
+      margin: 0 auto;
+
+      max-width: 95vw;
+
+      p {
+        display: inline-block;
+        white-space: nowrap;
+
+        &:first-child {
+          animation: 10s marquee-text-left1 linear infinite;
+
+          @keyframes marquee-text-left1 {
+            from {
+              transform: translateX(100%);
+            }
+            to {
+              transform: translateX(-100%);
+            }
+          }
+
+          background: $brand-primary;
+          background: -moz-linear-gradient(
+            90deg,
+            $brand-primary 0%,
+            $brand-outline 100%
+          );
+          background: -webkit-linear-gradient(
+            90deg,
+            $brand-primary 0%,
+            $brand-outline 100%
+          );
+          background: linear-gradient(
+            90deg,
+            $brand-primary 0%,
+            $brand-outline 100%
+          );
+          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#{$brand-primary}",endColorstr="#{$brand-outline}",GradientType=1);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        &:last-child {
+          animation: 10s marquee-text-left2 linear infinite;
+          animation-delay: 5s;
+
+          @keyframes marquee-text-left2 {
+            from {
+              transform: translateX(1%);
+            }
+            to {
+              transform: translateX(-201%);
+            }
+          }
+
+          background: $brand-outline;
+          background: -moz-linear-gradient(
+            90deg,
+            $brand-outline 0%,
+            $brand-primary 100%
+          );
+          background: -webkit-linear-gradient(
+            90deg,
+            $brand-outline 0%,
+            $brand-primary 100%
+          );
+          background: linear-gradient(
+            90deg,
+            $brand-outline 0%,
+            $brand-primary 100%
+          );
+          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#{$brand-outline}",endColorstr="#{$brand-primary}",GradientType=1);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+
+      // portals
+      &::after {
+      }
+    }
+
+    &__gallery {
+      position: relative;
+
+      &__container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+
+        justify-content: center;
+
+        gap: $margin__mobile--m;
+
+        & figure {
+          position: relative;
+          min-width: calc(450px - $page__mobile * 4);
+          flex-basis: 32%;
+          -webkit-box-shadow: 0 0 25px 5px
+            rgba($color: $brand-primary, $alpha: 0.25);
+          -moz-box-shadow: 0 0 25px 5px
+            rgba($color: $brand-primary, $alpha: 0.25);
+          box-shadow: 0 0 25px 5px rgba($color: $brand-primary, $alpha: 0.25);
+
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
+          overflow: clip;
+
+          &::after {
+            -webkit-box-shadow: inset 0px -120px 40px -60px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: inset 0px -120px 40px -60px rgba(0, 0, 0, 0.75);
+            box-shadow: inset 0px -120px 40px -60px rgba(0, 0, 0, 0.75);
+
+            content: "";
+            position: absolute;
+            top: 0;
+            display: block;
+            height: 100%;
+            width: 100%;
+          }
+
+          img {
+            aspect-ratio: 3 / 2;
+
+            object-fit: cover;
+          }
+
+          figcaption {
+            position: absolute;
+            padding: $margin__mobile--s;
+            bottom: 0;
+
+            z-index: 1;
+
+            a {
+              position: relative;
+
+              &::after {
+                content: "";
+
+                position: absolute;
+                width: 20px;
+                height: 20px;
+
+                background-image: url('data:image/svg+xml,<svg fill="%238fff83" height="10px" width="10px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" ></g><g id="SVGRepo_iconCarrier"><path id="XMLID_222_" d="M250.606,154.389l-150-149.996c-5.857-5.858-15.355-5.858-21.213,0.001 c-5.857,5.858-5.857,15.355,0.001,21.213l139.393,139.39L79.393,304.394c-5.857,5.858-5.857,15.355,0.001,21.213 C82.322,328.536,86.161,330,90,330s7.678-1.464,10.607-4.394l149.999-150.004c2.814-2.813,4.394-6.628,4.394-10.606 C255,161.018,253.42,157.202,250.606,154.389z" stroke-width="0"></path></g></svg>');
+                background-position: center;
+                background-repeat: no-repeat;
+
+                transition: $transition-primary;
+              }
+
+              &:hover::after {
+                transform: translateX(2px);
+              }
+            }
+          }
+        }
+      }
+
+      &__view-more {
+        text-align: center;
+        margin: $margin__mobile--m 0;
+
+        p {
+          margin-bottom: $margin__mobile--s;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $breakpoint-mobile) {
+  .main__services {
+    align-items: center;
+
+    & > * {
+      margin: 0 $page__desktop;
+    }
+
+    &__gallery__container figure {
+      min-width: calc(450px - $page__desktop * 4);
+    }
+  }
+}

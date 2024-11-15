@@ -1,0 +1,149 @@
+.main {
+  &__testimonials {
+    & > * {
+      margin: $margin__mobile--m $page__mobile;
+    }
+
+    &__container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: $margin__mobile--m;
+    }
+
+    &__review {
+      max-width: 400px;
+
+      // ? Different styles per review
+      & {
+        &:nth-of-type(1) {
+          $review-color: greenyellow;
+
+          & cite {
+            color: $review-color;
+          }
+
+          & img {
+            border-color: $review-color;
+            background-color: rgba($color: $review-color, $alpha: 0.3);
+            //   add padding here if needed to adjust the looks of the image
+          }
+        }
+        &:nth-of-type(2) {
+          $review-color: gold;
+
+          & cite {
+            color: $review-color;
+          }
+
+          & img {
+            border-color: $review-color;
+            background-color: rgba($color: $review-color, $alpha: 0.3);
+            //   add padding here if needed to adjust the looks of the image
+          }
+        }
+        &:nth-of-type(3) {
+          $review-color: orangered;
+
+          & cite {
+            color: $review-color;
+          }
+
+          & img {
+            border-color: $review-color;
+            background-color: rgba($color: $review-color, $alpha: 0.3);
+            //   add padding here if needed to adjust the looks of the image
+          }
+        }
+      }
+
+      // alternate odd reviews
+      &:nth-child(odd) blockquote {
+        flex-direction: row-reverse;
+        text-align: right;
+
+        & cite {
+          flex-direction: row-reverse;
+        }
+      }
+
+      // Review styles
+      blockquote {
+        display: flex;
+        gap: $margin__mobile--m;
+
+        // Images
+        & figure {
+          flex-shrink: 0;
+
+          & img {
+            border-width: 2px;
+            border-style: solid;
+            border-radius: 70px;
+          }
+        }
+
+        // Reviews
+        & div {
+          font-size: 12px;
+
+          display: grid;
+          gap: $margin__mobile--s;
+
+          & cite {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+
+            font-size: 14px;
+            font-style: normal;
+
+            & i {
+              font-size: 11px;
+              text-decoration: underline;
+              color: rgba($color: #fff, $alpha: 0.5);
+            }
+          }
+
+          & q {
+            font-size: 14px;
+            color: $brand-primary;
+
+            quotes: none;
+          }
+        }
+      }
+    }
+
+    // Reviews supporting link style
+    & a em {
+      font-style: normal;
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .main {
+    &__testimonials {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      & > * {
+        margin: $margin__mobile--m $page__desktop;
+      }
+
+      &__review {
+        &:nth-child(odd) blockquote {
+          flex-direction: row;
+          text-align: left;
+
+          & cite {
+            flex-direction: row;
+          }
+        }
+      }
+    }
+  }
+}

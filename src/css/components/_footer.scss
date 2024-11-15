@@ -1,0 +1,119 @@
+.footer {
+  display: grid;
+  place-items: center;
+  align-content: center;
+
+  height: 100vh;
+
+  background-blend-mode: multiply;
+  background-image: linear-gradient(to left, #181221, #340a3a, #181221),
+    linear-gradient(to top, $brand-primary, #27082c, $brand-primary);
+
+  border-top: 2px solid rgba($color: $brand-secondary, $alpha: 0.5);
+  border-bottom: 2px solid rgba($color: $brand-secondary, $alpha: 0.5);
+
+  margin-top: $margin__mobile--l;
+
+  // Navigation links
+  & > nav {
+    margin: $margin__mobile--m $page__mobile;
+  }
+  nav {
+    // Shared styles
+    display: flex;
+    font-size: 18px;
+
+    &.footer__stores,
+    &.footer__about,
+    &.footer__legal {
+      display: flex;
+      flex-wrap: wrap;
+      gap: $margin__mobile--m;
+
+      p {
+        width: 100%;
+      }
+
+      a {
+        text-decoration: underline;
+      }
+    }
+
+    &.footer__socials {
+      display: flex;
+      gap: $margin__mobile--m;
+
+      font-size: 24px;
+
+      transition: all 0.3s ease-in-out;
+
+      & a:hover {
+        color: $brand-secondary;
+      }
+    }
+  }
+
+  &__nav-container {
+    display: flex;
+    gap: $margin__mobile--l;
+
+    margin: $margin__mobile--m $page__mobile;
+  }
+
+  // form
+  form {
+    display: grid;
+    gap: $margin__mobile--s;
+    justify-items: start;
+
+    margin: $margin__mobile--m $page__mobile;
+
+    label {
+      color: $brand-primary;
+    }
+
+    div {
+      position: relative;
+
+      display: flex;
+      flex-wrap: nowrap;
+      gap: $margin__mobile--s;
+
+      input {
+        color: $text-tertiary;
+        background-color: transparent;
+
+        border: 2px solid $brand-primary;
+        border-radius: 100px;
+
+        padding: 12px;
+
+        &:first-child {
+          padding-left: 32px;
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      svg {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 12px;
+        color: white;
+      }
+    }
+  }
+
+  address {
+    margin: $margin__mobile--m $page__mobile;
+  }
+
+  address,
+  small {
+    font-size: 14px;
+    color: $text-tertiary;
+  }
+}

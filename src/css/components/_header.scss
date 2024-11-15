@@ -1,0 +1,82 @@
+.header {
+  transition: all $transition-primary;
+
+  display: grid;
+  grid-auto-flow: column;
+  place-items: center;
+  justify-content: space-between;
+
+  position: fixed;
+  top: 0;
+  z-index: 10;
+
+  width: 100%;
+
+  background-color: transparent;
+  padding: 20px $page__mobile;
+
+  border-bottom: 4px double transparent;
+
+  transform: translateY(-100%);
+  animation: 1s header-animation $transition-primary forwards;
+
+  @keyframes header-animation {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  &--default {
+    background-color: rgba($color: $background-primary, $alpha: 0.95);
+    border-bottom: 2px solid rgba($color: $brand-secondary, $alpha: 0.25);
+    @include box-shadow($brand-primary, 0.15);
+  }
+
+  &__navigation {
+    &--mobile {
+      touch-action: none;
+
+      font-size: 32px;
+
+      position: absolute;
+      top: 0;
+      right: 100%;
+
+      @include flex(column, center, center);
+
+      height: 100vh;
+      width: 100vw;
+
+      background-color: rgba($color: $background-primary, $alpha: 0.75);
+      backdrop-filter: blur(50px);
+
+      transition: $transition-primary;
+
+      nav {
+        button {
+          position: absolute;
+          top: 5%;
+          right: 10%;
+        }
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: $margin__mobile--s;
+
+          li a {
+            @include flex(row, flex-start, center);
+            gap: $margin__mobile--s;
+
+            svg {
+              width: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

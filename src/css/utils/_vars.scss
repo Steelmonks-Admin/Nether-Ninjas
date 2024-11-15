@@ -1,0 +1,51 @@
+// * Fonts
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+$font-family: "Rubik", sans-serif;
+
+// Main Colors
+$brand-primary: #9600d6;
+$brand-primary-hover: #ca80ea;
+$brand-primary-overlay: #c682e3e6;
+$brand-secondary: #c682e3;
+$brand-outline: #8fffb3;
+
+// Font Colors
+$text-primary: #fdfaff;
+$text-secondary: #aaaaaa;
+$text-tertiary: #dadada;
+$text-white: #fff;
+$text-black: #000;
+
+// Vector Graphics' Colors
+$svg-inactive: #afb1b8;
+
+// Background Colors
+$background-black: #000;
+$background-primary: #181221;
+$background-secondary: #d9d9d9;
+
+// Transitions
+$transition-primary: 350ms cubic-bezier(0.05, 0.35, 0.6, 0.95);
+
+// Default Widths
+$mobile__width-max: 480px;
+$mobile__width-min: 450px;
+$tablet__width-max: 768px;
+$tablet__width-min: 738px;
+$desktop__width-max: 1600px;
+$desktop__width-min: 1200px;
+
+// Default Margins
+$page__mobile: 46px;
+$page__desktop: 120px;
+$margin__mobile--l: 44px;
+$margin__mobile--m: 22px;
+$margin__mobile--s: 12px;
+$margin__desktop--s: 25px;
+$margin__desktop--m: 50px;
+$margin__desktop--l: 75px;
+
+// Responsive breakpoints
+$breakpoint-mobile: 481px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1201px;

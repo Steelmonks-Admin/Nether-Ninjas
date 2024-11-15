@@ -1,0 +1,157 @@
+// ! Credits - Do not remove !
+// prettier-ignore
+#credits{color:$text-tertiary;text-underline-offset:3px;text-decoration-thickness:1px;transition:350msease-in-out;&:hover, &:active{color:$text-primary;text-decoration-color:$brand-primary;-moz-text-decoration-color:$brand-primary;}}
+// ! Credits - Do not remove !
+
+* {
+  box-sizing: border-box;
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  background: rgba($color: $brand-secondary, $alpha: 0.5);
+  text-shadow: 3px 3px rgba($color: $background-primary, $alpha: 0.5);
+}
+::selection {
+  background: rgba($color: $brand-secondary, $alpha: 0.5);
+  text-shadow: 3px 3px rgba($color: $background-primary, $alpha: 0.5);
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: normal;
+  font-size: 14px;
+
+  position: relative;
+
+  background-color: $background-primary !important;
+
+  color: $text-primary !important;
+
+  // Add bg grid
+  background-size: 40px 40px;
+  background-image: linear-gradient(
+      to right,
+      rgba($color: $brand-primary, $alpha: 0.025) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      rgba($color: $brand-primary, $alpha: 0.025) 1px,
+      transparent 1px
+    );
+}
+
+section {
+  position: relative;
+  overflow-x: clip;
+}
+
+h1 {
+  @include font-h1(700);
+}
+h2 {
+  @include font-h2(700);
+}
+h3 {
+  @include font-h3(700);
+}
+h4 {
+  @include font-h4(700);
+}
+h5 {
+  @include font-h5(700);
+}
+
+b {
+  font-weight: 700;
+}
+
+a:hover {
+  cursor: pointer;
+  filter: brightness(0.85);
+}
+
+.main {
+  &__separator {
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    margin: $margin__mobile--l $page__mobile;
+  }
+}
+
+.link {
+  color: $brand-outline;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+
+  transition: $transition-primary;
+
+  &:hover,
+  &:active {
+    color: rgba($color: $brand-outline, $alpha: 0.75);
+  }
+}
+
+.button {
+  position: relative;
+  display: inline-block;
+
+  max-width: max-content;
+
+  border-radius: 50px;
+  padding: calc($margin__mobile--s / 2) $margin__mobile--s;
+  color: $text-primary;
+  background-color: transparent;
+
+  font-weight: bold;
+  text-decoration: none;
+
+  transform-origin: center;
+  transition: $transition-primary;
+
+  @include box-shadow($text-black, 0.25);
+
+  &:hover,
+  &:active {
+    color: $brand-primary;
+    cursor: pointer;
+
+    filter: brightness(0.85);
+    transform: translateY(-3px);
+  }
+
+  &--primary {
+    color: $brand-primary;
+    background-color: $text-primary;
+    border-color: $brand-primary;
+  }
+
+  &--close {
+    width: 43px;
+    aspect-ratio: 1 / 1;
+
+    b {
+      position: absolute;
+      top: 50%;
+      left: 50;
+
+      transform: translate(-50%, -50%);
+    }
+
+    &:hover,
+    &:active {
+      color: $brand-primary;
+      border-color: $brand-primary;
+      transform: rotate(180deg);
+    }
+  }
+}
+
+@media (min-width: $breakpoint-mobile) {
+  body {
+    font-size: 16px;
+  }
+  .main__separator {
+    margin: $margin__mobile--l $page__desktop;
+  }
+}
