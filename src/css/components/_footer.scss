@@ -88,12 +88,15 @@
 
         padding: 12px;
 
+        transition: all 0.3s $transition-primary;
+
         &:first-child {
           padding-left: 32px;
         }
 
-        &:hover {
+        &[type="submit"]:hover {
           cursor: pointer;
+          color: $brand-secondary;
         }
       }
 

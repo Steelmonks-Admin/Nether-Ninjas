@@ -7,12 +7,12 @@
 
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: space-between;
       flex-direction: column;
       gap: 25px;
 
       min-height: 100dvh;
-      padding: $margin__mobile--m 0;
+      padding: calc($margin__mobile--l * 2) 0 $margin__mobile--m 0;
 
       @media (min-width: $breakpoint-mobile) {
         padding: calc($margin__desktop--m * 2) 0 $margin__desktop--s 0;
@@ -58,6 +58,7 @@
         height: 100%;
         width: 100%;
 
+        flex: 1;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
