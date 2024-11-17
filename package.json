@@ -1,6 +1,15 @@
 {
-  "description": "",
+  "name": "nether-ninjas",
+  "version": "1.0.0",
+  "description": "Nether Ninjas Presentation Website",
+  "private": true,
   "devDependencies": {
-    "sass": "^1.76.0"
+    "sass": "^1.76.0",
+    "webpack": "^5.96.1",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "siema": "^1.5.1"
   }
 }
